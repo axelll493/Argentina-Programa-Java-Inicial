@@ -28,6 +28,7 @@ public class IntroducciónAlgoritmosJava {
             System.out.println("""
                                1 - Primer Ejercicio
                                2 - Segundo Ejercicio 
+                               3 - CERRAR EL PROGRAMA 
                                """);
             System.out.println("INGRESE UNA OPCION");
             int opcion = leer.nextInt();
@@ -55,17 +56,40 @@ public class IntroducciónAlgoritmosJava {
                         break;
                 case 2:
                     System.out.println("\n     Resoibde a las siguientes preguntas si perteneces a los ingresos altos \n \n");
-                    System.out.println("\n     ¿De cual es tu nombre\n");
-                    String Nombre = leer.nextLine();
-                    System.out.println("\n     ¿De cual es tu Apellido\n");
-                    String Apellido = leer.nextLine();
+                    
                     System.out.println("\n     ¿De cuanto es tu ingreso Mensual?\n");
                     int ingresoMensual = leer.nextInt();
                     System.out.println("\n     ¿Cuantos vehiculos tiene?\n");
                     int vehiculos = leer.nextInt();
+                    System.out.println("\n     ¿Cuantos muebles tiene?\n");
+                    int muebles = leer.nextInt();
+                   System.out.println("""
+                                          ¿Posees una embarcación, una aeronave de lujo 
+                                          o eres titular de activos societarios que 
+                                          demuestren capacidad económica plena?. 
+                                       """);
                     
+                    System.out.println("""
+                                          1 - SI POSEO
+                                          2 - NO POSEO
+                                       """);
+                    System.out.println("INGRESE UNA OPCION");
+                    int opcionn = leer.nextInt();
+                    //(3,5 canastas básicas para un hogar tipo 2 según el INDEC//
+                    //$489.083/3.5 =$139.738+ $489.083=$628.821
+                    if(ingresoMensual>=628.821 && vehiculos>=3 && muebles>=3 && opcionn==1){
+                        System.out.println("\nsi perteneces a los segmento de ingresos altos\n");
+                    }else{
+                        System.out.println("\nno perteneces a los segmento de ingresos altos\n");
+                    }
+                
                     break;
-            }
+                case 3:
+                    System.out.println("\nCerrar El Programa\n");
+                    break OUTHER;
+                default:
+                    System.out.println("\nOPCION INCORRECTA\n");
+            } 
         }
       
         
@@ -86,10 +110,10 @@ public class IntroducciónAlgoritmosJava {
         if(numeroIni !=0){
             if(numeroIni>0){
                 if(numeroIni % 2==0){
-                    System.out.printf("El numero %d es PAR Positivo \n", numeroIni);
+                    System.out.printf("El numero %d es PAR \n", numeroIni);
                     
                 }else{
-                    System.out.printf("El numero %d es IMPAR Positivo \n", numeroIni);
+                    System.out.printf("El numero %d es IMPAR \n", numeroIni);
                 }
             }
         }else{
@@ -110,7 +134,7 @@ public class IntroducciónAlgoritmosJava {
         if(numeroIni !=0){
             if(numeroIni>0){
                 if(numeroIni % 2==0){
-                    System.out.printf("El numero %d es PAR Positivo \n", numeroIni);
+                    System.out.printf("El numero %d es PAR\n", numeroIni);
             }
         }else{
             System.out.printf("El numero es neutro \n", numeroIni);
